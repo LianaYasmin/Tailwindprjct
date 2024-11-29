@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Dancing+Script:wght@400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=McLaren&family=Roboto+Slab:wght@100..900&display=swap"
+    rel="stylesheet">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    * {
+      font-family: "Dancing Script", cursive;
+    }
+
+
+    /* Mobile menu */
+    #mobile-menu {
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+    }
+
+    #mobile-menu.show {
+      transform: translateX(0);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="bg-gradient-to-r from-orange-500 to-teal-500 shadow-md fixed w-full z-10">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-4">
+        <a href="#" class="text-2xl font-bold text-white">FASHION</a>
+        <div id="menu" class="hidden lg:flex space-x-8 text-lg">
+          <a href="#" class="text-white hover:text-gray-300 transition">Home</a>
+          <a href="#about" class="text-white hover:text-gray-300 transition">About</a>
+          <a href="#contact" class="text-white hover:text-gray-300 transition">Contact Us</a>
+        </div>
+      </div>
+      <!--  -->
+      <button id="menu-toggle" class="lg:hidden text-white">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="lg:hidden fixed top-16 right-0 bg-white shadow-lg w-64 h-full z-20">
+    <div class="flex justify-end p-4">
+      <button id="close-menu" class="text-black">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+    <div class="flex flex-col items-center">
+      <a href="#" class="text-lg py-2 text-gray-800 hover:text-gray-600">Home</a>
+      <a href="#about" class="text-lg py-2 text-gray-800 hover:text-gray-600">About</a>
+      <a href="#contact" class="text-lg py-2 text-gray-800 hover:text-gray-600">Contact Us</a>
+    </div>
+  </div>
+
+  <div class="pt-20"></div>
+
+  <!-- Header -->
+  <header
+    class="bg-gradient-to-r from-yellow-500 to-red-500 text-white py-20 flex items-center justify-center relative">
+    <div class="absolute inset-0 bg-cover bg-center"
+      style="background-image: url('https://www.blibli.com/friends-backend/wp-content/uploads/2023/05/B400294-Cover-Apa-Perbedaan-Fashion-dan-Style-1-scaled.jpg'); opacity: 0.4;">
+    </div>
+    <div class="relative z-10 text-center">
+      <h1 class="text-5xl font-bold">FASHION STORE</h1>
+
+      <p class="mt-4 text-3xl">Boost your style sense !</p>
+    </div>
+  </header>
+
+  <!-- Image Gallery -->
+  <section class="container mx-auto py-10 px-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <!-- Gallery Items -->
+      <!-- Image Card Example -->
+      <label for="modal" class="relative group cursor-pointer">
+        <div class="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <img style="height: 500px;"
+            src="https://i0.wp.com/greenweddingshoes.com/wp-content/uploads/2024/04/casual-blue-white-striped-two-piece-set-trendy-cute-summer-outfit-ideas.jpeg?fit=1024%2C9999"
+            class="w-full  object-cover transition duration-300 transform group-hover:scale-105">
+        </div>
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 opacity-0 group-hover:opacity-90 flex items-center justify-center transition duration-300">
+          <div class="text-white text-center">
+            <h2 class="text-lg font-bold">Women's Collections</h2>
+            <button class="btn outline outline-white-300 outline-1 p-2 mt-3">Shop now</button>
+          </div>
+        </div>
+      </label>
+      <label for="modal" class="relative group cursor-pointer">
+        <div class="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <img style="height: 500px;"
+            src="https://cdn.shopify.com/s/files/1/0310/3571/9739/files/Best_Male_Model_Poses_for_Photography_-_Poses_Sitting_1024x1024.jpg?v=1592614181"
+            alt="Mountain View" class="w-full  object-cover transition duration-300 transform group-hover:scale-105">
+        </div>
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-blue-600 via-indigo-500 to-teal-500 opacity-0 group-hover:opacity-90 flex items-center justify-center transition duration-300">
+          <div class="text-white text-center">
+            <h3 class="text-lg font-bold">Men's Colections</h3>
+            <button class="btn outline outline-white-300 outline-1 p-2 mt-3">Shop now</button>
+          </div>
+        </div>
+      </label>
+      <label for="modal" class="relative group cursor-pointer">
+        <div class="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <img style="height: 500px;"
+            src="https://jessicawang.com/wp-content/uploads/2017/12/camel-coat-newsboy-cap-tan-turtleneck-flared-jeans-winter-outfit-nyc-notjessfashion.jpg"
+            alt="City Lights" class="w-full h-fit object-cover transition duration-300 transform group-hover:scale-105">
+        </div>
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-red-600 via-orange-500 to-yellow-500 opacity-0 group-hover:opacity-90 flex items-center justify-center transition duration-300">
+          <div class="text-white text-center">
+            <h3 class="text-lg font-bold">Winter wear</h3>
+            <button class="btn outline outline-white-300 outline-1 p-2 mt-3">Shop now</button>
+          </div>
+        </div>
+      </label>
+      <label for="modal" class="relative group cursor-pointer">
+        <div class="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <img style="height: 500px;"
+            src="https://media.glamour.com/photos/62682433d24f547006945e46/master/w_1600%2Cc_limit/1392544062"
+            alt="Beach Sunset"
+            class="w-full h-auto object-cover transition duration-300 transform group-hover:scale-105">
+        </div>
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-yellow-600 via-red-500 to-pink-500 opacity-0 group-hover:opacity-90 flex items-center justify-center transition duration-300">
+          <div class="text-white text-center">
+            <h3 class="text-lg font-bold">Summer Collections</h3>
+            <button class="btn outline outline-white-300 outline-1 p-2 mt-3">Shop now</button>
+          </div>
+        </div>
+      </label>
+      <label for="modal" class="relative group cursor-pointer">
+        <div class="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <img style="height: 300px;"
+            src="https://www.westside.com/cdn/shop/articles/summer_kidswear_by_westside.jpg?v=1652442923"
+            alt="Forest Path"
+            class="w-full h-auto object-cover transition duration-300 transform group-hover:scale-105">
+        </div>
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-green-600 via-teal-500 to-blue-500 opacity-0 group-hover:opacity-90 flex items-center justify-center transition duration-300">
+          <div class="text-white text-center">
+            <h2 class="text-lg font-bold">Kids wear</h2>
+            <button class="btn outline outline-white-300 outline-1 p-2 mt-3">Shop now</button>
+          </div>
+        </div>
+      </label>
+      <label for="modal" class="relative group cursor-pointer">
+        <div class="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <img style="height: 300px;"
+            src="https://cdn.shopify.com/s/files/1/0553/8142/6241/files/SS24_Accessorize_Sparse_10_118_480x480.jpg?v=1720772886"
+            alt="Desert Dunes"
+            class="w-full h-auto object-cover transition duration-300 transform group-hover:scale-105">
+        </div>
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-orange-600 via-yellow-500 to-red-500 opacity-0 group-hover:opacity-90 flex items-center justify-center transition duration-300">
+          <div class="text-white text-center">
+            <h3 class="text-lg font-bold">Accesories</h3>
+            <button class="btn outline outline-white-300 outline-1 p-2 mt-3">Shop now</button>
+          </div>
+        </div>
+      </label>
+      <label for="modal" class="relative group cursor-pointer">
+        <div class="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <img style="height: 300px;" src="https://down-ph.img.susercontent.com/file/a1639838908969837bd54a0b7a99db2b"
+            alt="Snowy Peaks"
+            class="w-full h-auto object-cover transition duration-300 transform group-hover:scale-105">
+        </div>
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-blue-800 via-blue-500 to-blue-300 opacity-0 group-hover:opacity-90 flex items-center justify-center transition duration-300">
+          <div class="text-white text-center">
+            <h3 class="text-lg font-bold">Bags</h3>
+            <button class="btn outline outline-white-300 outline-1 p-2 mt-3">Shop now</button>
+          </div>
+        </div>
+      </label>
+      <label for="modal" class="relative group cursor-pointer">
+        <div class="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <img style="height: 300px;"
+            src="https://www.economist.com/cdn-cgi/image/width=1424,quality=80,format=auto/https://www.1843magazine.com/sites/default/files/styles/il_manual_crop_16_9/public/201806_ST_TRA_01-header-tall-new-V4.jpg"
+            alt="Wildlife" class="w-full h-auto object-cover transition duration-300 transform group-hover:scale-105">
+        </div>
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-green-800 via-green-500 to-green-300 opacity-0 group-hover:opacity-90 flex items-center justify-center transition duration-300">
+          <div class="text-white text-center">
+            <h3 class="text-lg font-bold">Shoes</h3>
+            <button class="btn outline outline-white-300 outline-1 p-2 mt-3">Shop now</button>
+          </div>
+        </div>
+      </label>
+    </div>
+  </section>
+
+  <!--  -->
+ 
+  <div id="sales" class="my-5 pb-96 pt-5" style="background-image: url('https://i.pinimg.com/1200x/7c/76/6c/7c766cf2c7cae2701c29926e4cc7270b.jpg');background-repeat: no-repeat;background-size: cover;">
+
+  </div>
+  <!-- sale -->
+  <section class="sales container sm:mx-5">
+   <div class="grid grid-cols-2 gap-6">
+     <div class=" md:pt-20">
+       
+       <h2 class="md:text-8xl sm:text-2xl md:ml-56 sm:ml-14 my-5 not-italic font-sans" >SALE UPTO
+        <br> 50% <br> OFF</h2>
+        <h1 class="md:text-6xl text-center md:mt-24 font-bold">Meet</h1>
+       <h1 class="md:text-6xl text-center my-3 not-italic font-serif">THE OUTFIT</h1>
+       <h1 class="md:text-6xl text-center font-bold">Updaters</h1>
+       <p class="md:text-3xl text-center mt-5">Introducing the pieces that will <br> transform your closet - and your <br> look now !</p>
+     </div>
+     <div class="md:pt-10 my-5">
+    <img src="https://i.pinimg.com/originals/c1/ce/e6/c1cee6e355740b3577b1a96aa233e82a.gif" alt="no image">
+     </div>
+   </div> 
+  </section>
+
+
+  <!-- Footer -->
+  <footer>
+    <div class=" bg-amber-50 py-9">
+      <div class="p-5 flex justify-center content-center flex-col">
+        <i class="fa-regular fa-paper-plane text-center my-3"></i>
+        <h1 class="not-italic font-serif text-center my-4">WANT SOME INBOX LOVE ?</h1>
+        <div class="flex justify-center content-center">
+          <input type="text" placeholder="Email Address" class="w-96 h-30 outline outline-1 outline-grey-500 text-center">
+          <button class="btn outline outline-black-500 outline-1 p-3">SUBMIT</button>
+        </div>
+      </div>
+  
+      
+       <div class="my-8">
+          <h1 class="not-italic font-serif text-center my-2">FAQ</h1>
+          <h1 class="not-italic font-serif text-center my-2">RETURNS</h1>
+          <h1 class="not-italic font-serif text-center my-2">SHIPPING</h1>
+          <h1 class="not-italic font-serif text-center my-2">CONTACT</h1>
+          <h1  class="not-italic font-serif text-center my-2">STORE FINDER</h1>
+       </div >
+    </div>
+
+
+       <div class="bg-gradient-to-r from-orange-500 to-teal-500 py-16 mb-0">
+          <div class=" flex justify-center content-center">
+            <button class="btn outline outline-1  px-4 py-2 mx-4"><i class="fa-brands fa-facebook-f"></i></button>
+            <button class="btn outline outline-1  px-4 py-2 mx-4"><i class="fa-brands fa-instagram"></i></button>
+            <button class="btn outline outline-1  px-4 py-2 mx-4"><i class="fa-brands fa-snapchat"></i></button>
+            <button class="btn outline outline-1   px-4 py-2 mx-4"><i class="fa-brands fa-pinterest-p"></i></button>
+          </div>
+  
+          <div class="flex justify-center items-center flex-col mt-8">
+            <h1 class="not-italic font-serif mt-1">SITE BY BAO AGENCY</h1>
+            <h1 class="not-italic font-serif  mt-1">COPYRIGHT FASHION STORE 2024</h1>
+            <h1 class="not-italic font-serif  mt-1">TERMS & CONDITIONS | PRIVACY | LEGAL NOTICE</h1>
+          </div>
+       </div>
+   
+    
+  </footer>
+</body>
+
+</html>
